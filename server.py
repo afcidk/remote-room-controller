@@ -2,6 +2,7 @@ from telegram.ext import Updater
 from telegram.ext import CommandHandler, CallbackQueryHandler
 from send import create_connection_thread
 import modes
+import config
 import logging
 '''
 logging.basicConfig(level=logging.DEBUG,
@@ -30,7 +31,7 @@ def callbackHandler(bot, update):
 
 if __name__ == "__main__":
 
-    updater = Updater(token='672339448:AAEG6Xm398_07vRPZb-TKEp2nh0RlpQNiFE')
+    updater = Updater(token=config.token)
     dispatcher = updater.dispatcher
     command_list = ['start', 'menu']
 
